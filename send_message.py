@@ -17,7 +17,7 @@ List = test.get_data_list(app_token="bascno69957RY8XosYuC5llpRFc", table_id='tbl
 bir_user = []
 now_time = datetime.datetime.now()
 for each_time in List:
-    print("start")
+    print(time.localtime(each_time["fields"]["生日"] / 1000))
     month = int(time.strftime('%m', time.localtime(each_time["fields"]["生日"] / 1000)))
     day = int(time.strftime('%d', time.localtime(each_time["fields"]["生日"] / 1000)))
     if now_time.month == month and now_time.day == day:
