@@ -6,7 +6,6 @@ from os import getenv
 from dotenv import find_dotenv, load_dotenv
 import datetime
 
-print("start")
 
 load_dotenv(find_dotenv(), verbose=True)
 # print(os.getenv("LARK_HOST"))
@@ -17,9 +16,8 @@ List = test.get_data_list(app_token="bascno69957RY8XosYuC5llpRFc", table_id='tbl
 bir_user = []
 now_time = datetime.datetime.now()
 for each_time in List:
-    print(time.localtime(each_time["fields"]["生日"] / 1000))
-    month = int(time.strftime('%m', time.localtime(each_time["fields"]["生日"] / 1000)))
-    day = int(time.strftime('%d', time.localtime(each_time["fields"]["生日"] / 1000)))
+    month = int(time.strftime('%m', time.localtime((each_time["fields"]["生日"]+28800000) / 1000)))
+    day = int(time.strftime('%d', time.localtime((each_time["fields"]["生日"]+28800000) / 1000)))
     if now_time.month == month and now_time.day == day:
         bir_user.append(each_time["fields"]["姓名"])
 item = test.get_detail_group(tenant_access_token=Token)
