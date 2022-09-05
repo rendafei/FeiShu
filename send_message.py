@@ -11,7 +11,7 @@ load_dotenv(find_dotenv(), verbose=True)
 # print(os.getenv("LARK_HOST"))
 test = Client(os.getenv("LARK_HOST"))
 Token = test.get_app_access_token(os.getenv("APP_ID"), os.getenv("APP_SECRET"))
-List = test.get_data_list(app_token="bascno69957RY8XosYuC5llpRFc", table_id='tblzPs7ery9n6uwl',
+List = test.get_data_list(app_token="bascnr2i13oqIMoZG0sGlIDJDnf", table_id='tbldlM5L96B0QKrw',
                           tenant_access_token=Token)
 bir_user = []
 now_time = datetime.datetime.now()
