@@ -6,6 +6,8 @@ from os import getenv
 from dotenv import find_dotenv, load_dotenv
 import datetime
 
+print("start")
+
 load_dotenv(find_dotenv(), verbose=True)
 # print(os.getenv("LARK_HOST"))
 test = Client(os.getenv("LARK_HOST"))
