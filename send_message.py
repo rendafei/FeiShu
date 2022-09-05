@@ -15,14 +15,14 @@ List = test.get_data_list(app_token="bascno69957RY8XosYuC5llpRFc", table_id='tbl
 bir_user = []
 now_time = datetime.datetime.now()
 for each_time in List:
-    month = int(time.strftime('%m', time.localtime(each_time["fields"]["出生日期"] / 1000)))
-    day = int(time.strftime('%d', time.localtime(each_time["fields"]["出生日期"] / 1000)))
+    month = int(time.strftime('%m', time.localtime(each_time["fields"]["生日"] / 1000)))
+    day = int(time.strftime('%d', time.localtime(each_time["fields"]["生日"] / 1000)))
     if now_time.month == month and now_time.day == day:
-        bir_user.append(each_time["fields"]["成员姓名"])
+        bir_user.append(each_time["fields"]["姓名"])
 item = test.get_detail_group(tenant_access_token=Token)
 chat_id = " "
 for each_group in item:
-    if each_group["name"] == "启梦团队":
+    if each_group["name"] == "生日":
         chat_id = each_group["chat_id"]
         break
 members = test.get_user_id(tenant_access_token=Token, chat_id=chat_id)
