@@ -36,6 +36,7 @@ for name, each_id in zip(bir_user, user_id):
     print(name, each_id, '\n')
 
 for (name, each_id) in zip(bir_user, user_id):
+    print("start")
     test.send_bir_message(tenant_access_token=Token, chat_id=chat_id, user_id=each_id, user_name=name)
 
 
