@@ -25,4 +25,4 @@ jobs:
       
     - name: Run the program
       run: |
-        python send_message
+        python send_message.py
